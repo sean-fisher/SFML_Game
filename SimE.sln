@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimE", "SimE\SimE.vcxproj", "{EF67C668-FCDC-480A-9BB0-6B9196ACDD07}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game", "Game\Game.vcxproj", "{7D7FB6D5-CD3F-4E81-AD4C-ECE05B22BA67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{EF67C668-FCDC-480A-9BB0-6B9196ACDD07}.Release|x64.Build.0 = Release|x64
 		{EF67C668-FCDC-480A-9BB0-6B9196ACDD07}.Release|x86.ActiveCfg = Release|Win32
 		{EF67C668-FCDC-480A-9BB0-6B9196ACDD07}.Release|x86.Build.0 = Release|Win32
+		{7D7FB6D5-CD3F-4E81-AD4C-ECE05B22BA67}.Debug|x64.ActiveCfg = Debug|x64
+		{7D7FB6D5-CD3F-4E81-AD4C-ECE05B22BA67}.Debug|x64.Build.0 = Debug|x64
+		{7D7FB6D5-CD3F-4E81-AD4C-ECE05B22BA67}.Debug|x86.ActiveCfg = Debug|Win32
+		{7D7FB6D5-CD3F-4E81-AD4C-ECE05B22BA67}.Debug|x86.Build.0 = Debug|Win32
+		{7D7FB6D5-CD3F-4E81-AD4C-ECE05B22BA67}.Release|x64.ActiveCfg = Release|x64
+		{7D7FB6D5-CD3F-4E81-AD4C-ECE05B22BA67}.Release|x64.Build.0 = Release|x64
+		{7D7FB6D5-CD3F-4E81-AD4C-ECE05B22BA67}.Release|x86.ActiveCfg = Release|Win32
+		{7D7FB6D5-CD3F-4E81-AD4C-ECE05B22BA67}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
