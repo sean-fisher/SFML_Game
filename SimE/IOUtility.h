@@ -2,15 +2,13 @@
 
 #include <string>
 #include <sfml/Graphics.hpp>
+#include "MapLayer.h"
+#include "enums.h"
 
 namespace SimE {
-enum TextureType {
-	CHARACTER,
-	ENEMY,
-	TILESET,
-	EFFECT,
-	UI
-};
+
+enum TextureType;
+
 class IOUtility {
 public:
 	IOUtility();

@@ -5,14 +5,17 @@
 namespace SimE {
 class Tile {
 public:
-	Tile();
-	Tile(sf::Texture& texture);
+	Tile() {};
+	Tile(sf::Texture& texture, float scaleX, float scaleY, bool flipDiagonally);
 	~Tile();
+	void setTexture(sf::Texture* texture);
 
 	void draw(int x, int y, sf::RenderWindow* rWindow);
 
-private:
+protected:
 	sf::Sprite m_sprite;
+	int m_width;
+	int m_height;
 };
 
 }

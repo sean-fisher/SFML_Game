@@ -17,23 +17,33 @@ int IOUtility::getHashFromFilepath(const std::string & filepath) {
 	return hash;
 }
 
-bool IOUtility::getTexture(TextureType textureType, const std::string & filepath, sf::Texture* in) {
+bool IOUtility::getTexture(TextureType textureType, const std::string & textureName, sf::Texture* in) {
 	switch (textureType) {
 	case CHARACTER:
-		in->loadFromFile("Assets/Textures/Characters/" + filepath);
+		in->loadFromFile("Assets/Textures/Characters/" + textureName);
 		return true;
 	case ENEMY:
-		in->loadFromFile("Assets/Textures/Enemies/" + filepath);
+		in->loadFromFile("Assets/Textures/Enemies/" + textureName);
 		return true;
 	case TILESET:
-		in->loadFromFile("Assets/Textures/Tileset/" + filepath);
+		in->loadFromFile("Assets/Textures/Tileset/" + textureName);
+		return true;
+	case TILE:
+		in->loadFromFile("Assets/Textures/Tiles/" + textureName);
 		return true;
 	case EFFECT:
-		in->loadFromFile("Assets/Textures/Effect/" + filepath);
+		in->loadFromFile("Assets/Textures/Effect/" + textureName);
 		return true;
 	case UI:
-		in->loadFromFile("Assets/Textures/UI/" + filepath);
+		in->loadFromFile("Assets/Textures/UI/" + textureName);
+		return true;
+
+	case TEST:
+		in->loadFromFile("Assets/Textures/Test/" + textureName);
 		return true;
 	}
+	return false;
 }
+
+
 }
