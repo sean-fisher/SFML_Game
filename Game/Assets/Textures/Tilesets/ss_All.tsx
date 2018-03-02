@@ -269,31 +269,31 @@
   <image width="48" height="80" source="../Tiles/wooden_planks.2d2.png"/>
  </tile>
  <tile id="92">
-  <image width="9" height="32" source="../Tiles/_Sprites1_01.png"/>
+  <image width="9" height="32" source="../Tiles/Building-modern/_Sprites1_01.png"/>
  </tile>
  <tile id="93">
-  <image width="9" height="25" source="../Tiles/_Sprites1_02.png"/>
+  <image width="9" height="25" source="../Tiles/Building-modern/_Sprites1_02.png"/>
  </tile>
  <tile id="94">
-  <image width="9" height="25" source="../Tiles/_Sprites1_03.png"/>
+  <image width="9" height="25" source="../Tiles/Building-modern/_Sprites1_03.png"/>
  </tile>
  <tile id="95">
   <image width="16" height="17" source="../Tiles/_Sprites1_04.png"/>
  </tile>
  <tile id="96">
-  <image width="16" height="25" source="../Tiles/_Sprites1_05.png"/>
+  <image width="16" height="25" source="../Tiles/Building-modern/_Sprites1_05.png"/>
  </tile>
  <tile id="97">
-  <image width="16" height="56" source="../Tiles/_Sprites1_06.png"/>
+  <image width="16" height="56" source="../Tiles/Building-modern/_Sprites1_06.png"/>
  </tile>
  <tile id="98">
-  <image width="12" height="31" source="../Tiles/_Sprites1_07.png"/>
+  <image width="12" height="31" source="../Tiles/Building-modern/_Sprites1_07.png"/>
  </tile>
  <tile id="99">
-  <image width="32" height="45" source="../Tiles/_Sprites1_08.png"/>
+  <image width="32" height="45" source="../Tiles/Building-modern/_Sprites1_08.png"/>
  </tile>
  <tile id="100">
-  <image width="33" height="53" source="../Tiles/_Sprites1_09.png"/>
+  <image width="33" height="53" source="../Tiles/Building-modern/_Sprites1_09.png"/>
  </tile>
  <tile id="101">
   <image width="16" height="32" source="../Tiles/_Sprites1_10.png"/>
@@ -329,19 +329,19 @@
   <image width="12" height="13" source="../Tiles/_Sprites1_20.png"/>
  </tile>
  <tile id="112">
-  <image width="28" height="36" source="../Tiles/_Sprites1_21.png"/>
+  <image width="28" height="36" source="../Tiles/Building-modern/_Sprites1_21.png"/>
  </tile>
  <tile id="113">
-  <image width="32" height="48" source="../Tiles/_Sprites1_22.png"/>
+  <image width="32" height="48" source="../Tiles/Building-modern/_Sprites1_22.png"/>
  </tile>
  <tile id="114">
-  <image width="16" height="45" source="../Tiles/_Sprites1_23.png"/>
+  <image width="16" height="45" source="../Tiles/Building-modern/_Sprites1_23.png"/>
  </tile>
  <tile id="115">
   <image width="32" height="16" source="../Tiles/_Sprites1_24.png"/>
  </tile>
  <tile id="116">
-  <image width="32" height="46" source="../Tiles/_Sprites1_25.png"/>
+  <image width="32" height="46" source="../Tiles/Building-modern/_Sprites1_25.png"/>
  </tile>
  <tile id="117">
   <image width="6" height="14" source="../Tiles/_Sprites1_26.png"/>
@@ -368,10 +368,10 @@
   <image width="32" height="48" source="../Tiles/_Sprites1_33.png"/>
  </tile>
  <tile id="125">
-  <image width="56" height="95" source="../Tiles/_Sprites1_34.png"/>
+  <image width="56" height="95" source="../Tiles/Building-modern/_Sprites1_34.png"/>
  </tile>
  <tile id="126">
-  <image width="40" height="85" source="../Tiles/_Sprites1_35.png"/>
+  <image width="40" height="85" source="../Tiles/Building-modern/_Sprites1_35.png"/>
  </tile>
  <tile id="127">
   <image width="10" height="15" source="../Tiles/_Sprites1_36.png"/>
@@ -386,13 +386,13 @@
   <image width="32" height="32" source="../Tiles/_Sprites1_39.png"/>
  </tile>
  <tile id="131">
-  <image width="20" height="45" source="../Tiles/_Sprites1_40.png"/>
+  <image width="20" height="45" source="../Tiles/Building-modern/_Sprites1_40.png"/>
  </tile>
  <tile id="132">
   <image width="108" height="83" source="../Tiles/_Sprites1_41.png"/>
  </tile>
  <tile id="133">
-  <image width="15" height="20" source="../Tiles/_Sprites1_42.png"/>
+  <image width="15" height="20" source="../Tiles/Building-modern/_Sprites1_42.png"/>
  </tile>
  <tile id="134">
   <image width="10" height="48" source="../Tiles/_Sprites1_43.png"/>
@@ -413,43 +413,43 @@
   <image width="32" height="17" source="../Tiles/_Sprites1_48.png"/>
  </tile>
  <tile id="140">
-  <image width="32" height="34" source="../Tiles/_Sprites1_49.png"/>
+  <image width="32" height="34" source="../Tiles/Building-modern/_Sprites1_49.png"/>
  </tile>
  <tile id="141">
-  <image width="32" height="21" source="../Tiles/_Sprites1_51.png"/>
+  <image width="32" height="21" source="../Tiles/Building-modern/_Sprites1_51.png"/>
  </tile>
  <tile id="142">
   <image width="15" height="7" source="../Tiles/_Sprites1_52.png"/>
  </tile>
  <tile id="143">
-  <image width="10" height="21" source="../Tiles/_Sprites1_53.png"/>
+  <image width="10" height="21" source="../Tiles/Building-modern/_Sprites1_53.png"/>
  </tile>
  <tile id="144">
-  <image width="9" height="32" source="../Tiles/_Sprites1_54.png"/>
+  <image width="9" height="32" source="../Tiles/Building-modern/_Sprites1_54.png"/>
  </tile>
  <tile id="145">
   <image width="32" height="31" source="../Tiles/_Sprites1_55.png"/>
  </tile>
  <tile id="146">
-  <image width="16" height="17" source="../Tiles/_Sprites1_56.png"/>
+  <image width="16" height="17" source="../Tiles/Building-modern/_Sprites1_56.png"/>
  </tile>
  <tile id="147">
-  <image width="15" height="17" source="../Tiles/_Sprites1_57.png"/>
+  <image width="15" height="17" source="../Tiles/Building-modern/_Sprites1_57.png"/>
  </tile>
  <tile id="148">
-  <image width="32" height="31" source="../Tiles/_Sprites1_58.png"/>
+  <image width="32" height="31" source="../Tiles/Building-modern/_Sprites1_58.png"/>
  </tile>
  <tile id="149">
-  <image width="15" height="30" source="../Tiles/_Sprites1_59.png"/>
+  <image width="15" height="30" source="../Tiles/Building-modern/_Sprites1_59.png"/>
  </tile>
  <tile id="150">
-  <image width="14" height="24" source="../Tiles/_Sprites1_60.png"/>
+  <image width="14" height="24" source="../Tiles/Building-modern/_Sprites1_60.png"/>
  </tile>
  <tile id="151">
-  <image width="14" height="31" source="../Tiles/_Sprites1_61.png"/>
+  <image width="14" height="31" source="../Tiles/Building-modern/_Sprites1_61.png"/>
  </tile>
  <tile id="152">
-  <image width="16" height="15" source="../Tiles/_Sprites1_62.png"/>
+  <image width="16" height="15" source="../Tiles/Building-modern/_Sprites1_62.png"/>
  </tile>
  <tile id="153">
   <image width="16" height="16" source="../Tiles/_Sprites2_01.png"/>
@@ -503,10 +503,10 @@
   <image width="55" height="145" source="../Tiles/_Sprites7_11.png"/>
  </tile>
  <tile id="170">
-  <image width="43" height="127" source="../Tiles/_Sprites7_12.png"/>
+  <image width="43" height="127" source="../Tiles/Dirt/_Sprites7_12.png"/>
  </tile>
  <tile id="171">
-  <image width="64" height="104" source="../Tiles/_Sprites7_13.png"/>
+  <image width="64" height="104" source="../Tiles/Dirt/_Sprites7_13.png"/>
  </tile>
  <tile id="172">
   <image width="32" height="72" source="../Tiles/_Sprites7_14.png"/>
@@ -527,7 +527,7 @@
   <image width="16" height="128" source="../Tiles/_Sprites7_19.png"/>
  </tile>
  <tile id="178">
-  <image width="64" height="80" source="../Tiles/_Sprites7_20.png"/>
+  <image width="64" height="80" source="../Tiles/Dirt/_Sprites7_20.png"/>
  </tile>
  <tile id="179">
   <image width="30" height="73" source="../Tiles/_Sprites7_21.png"/>
@@ -791,22 +791,22 @@
   <image width="32" height="32" source="../Tiles/floor-checker-square.png"/>
  </tile>
  <tile id="266">
-  <image width="14" height="16" source="../Tiles/adobe_Sprites5_55.png"/>
+  <image width="14" height="16" source="../Tiles/Plants/adobe_Sprites5_55.png"/>
  </tile>
  <tile id="267">
-  <image width="12" height="17" source="../Tiles/adobe_Sprites5_56.png"/>
+  <image width="12" height="17" source="../Tiles/Plants/adobe_Sprites5_56.png"/>
  </tile>
  <tile id="268">
-  <image width="12" height="15" source="../Tiles/adobe_Sprites5_57.png"/>
+  <image width="12" height="15" source="../Tiles/Plants/adobe_Sprites5_57.png"/>
  </tile>
  <tile id="269">
   <image width="14" height="23" source="../Tiles/adobe_Sprites5_58.png"/>
  </tile>
  <tile id="270">
-  <image width="32" height="18" source="../Tiles/adobe_Sprites5_59.png"/>
+  <image width="32" height="18" source="../Tiles/Building-old/adobe_Sprites5_59.png"/>
  </tile>
  <tile id="271">
-  <image width="32" height="18" source="../Tiles/adobe_Sprites5_60.png"/>
+  <image width="32" height="18" source="../Tiles/Building-old/adobe_Sprites5_60.png"/>
  </tile>
  <tile id="272">
   <image width="7" height="8" source="../Tiles/adobe_Sprites5_61.png"/>
@@ -854,7 +854,7 @@
   <image width="56" height="131" source="../Tiles/adobe_Sprites5_14.png"/>
  </tile>
  <tile id="287">
-  <image width="64" height="64" source="../Tiles/adobe_Sprites5_15.png"/>
+  <image width="64" height="64" source="../Tiles/Rock/adobe_Sprites5_15.png"/>
  </tile>
  <tile id="288">
   <image width="34" height="46" source="../Tiles/adobe_Sprites5_16.png"/>
@@ -935,10 +935,10 @@
   <image width="16" height="16" source="../Tiles/adobe_Sprites5_41.png"/>
  </tile>
  <tile id="314">
-  <image width="14" height="14" source="../Tiles/adobe_Sprites5_42.png"/>
+  <image width="14" height="14" source="../Tiles/Plants/adobe_Sprites5_42.png"/>
  </tile>
  <tile id="315">
-  <image width="14" height="14" source="../Tiles/adobe_Sprites5_43.png"/>
+  <image width="14" height="14" source="../Tiles/Plants/adobe_Sprites5_43.png"/>
  </tile>
  <tile id="316">
   <image width="5" height="4" source="../Tiles/adobe_Sprites5_44.png"/>
@@ -950,28 +950,28 @@
   <image width="16" height="17" source="../Tiles/adobe_Sprites5_46.png"/>
  </tile>
  <tile id="319">
-  <image width="30" height="68" source="../Tiles/adobe_Sprites5_47.png"/>
+  <image width="30" height="68" source="../Tiles/Building-old/adobe_Sprites5_47.png"/>
  </tile>
  <tile id="320">
-  <image width="30" height="55" source="../Tiles/adobe_Sprites5_48.png"/>
+  <image width="30" height="55" source="../Tiles/Building-old/adobe_Sprites5_48.png"/>
  </tile>
  <tile id="321">
   <image width="32" height="54" source="../Tiles/adobe_Sprites5_49.png"/>
  </tile>
  <tile id="322">
-  <image width="15" height="31" source="../Tiles/adobe_Sprites5_50.png"/>
+  <image width="15" height="31" source="../Tiles/Building-old/adobe_Sprites5_50.png"/>
  </tile>
  <tile id="323">
-  <image width="17" height="28" source="../Tiles/adobe_Sprites5_51.png"/>
+  <image width="17" height="28" source="../Tiles/Building-old/adobe_Sprites5_51.png"/>
  </tile>
  <tile id="324">
-  <image width="15" height="27" source="../Tiles/adobe_Sprites5_52.png"/>
+  <image width="15" height="27" source="../Tiles/Plants/adobe_Sprites5_52.png"/>
  </tile>
  <tile id="325">
-  <image width="15" height="27" source="../Tiles/adobe_Sprites5_53.png"/>
+  <image width="15" height="27" source="../Tiles/Plants/adobe_Sprites5_53.png"/>
  </tile>
  <tile id="326">
-  <image width="15" height="15" source="../Tiles/adobe_Sprites5_54.png"/>
+  <image width="15" height="15" source="../Tiles/Plants/adobe_Sprites5_54.png"/>
  </tile>
  <tile id="327">
   <image width="128" height="96" source="../Tiles/mine_dirt.png"/>
@@ -980,16 +980,16 @@
   <image width="32" height="32" source="../Tiles/cave-arch.png"/>
  </tile>
  <tile id="329">
-  <image width="64" height="64" source="../Tiles/cave-border-corner.png"/>
+  <image width="64" height="64" source="../Tiles/Dirt/cave-border-corner.png"/>
  </tile>
  <tile id="330">
-  <image width="32" height="64" source="../Tiles/Cave-Border-slant.png"/>
+  <image width="32" height="64" source="../Tiles/Dirt/Cave-Border-slant.png"/>
  </tile>
  <tile id="331">
   <image width="32" height="32" source="../Tiles/black-square.png"/>
  </tile>
  <tile id="332">
-  <image width="16" height="32" source="../Tiles/Cave-Border-horiz.png"/>
+  <image width="16" height="32" source="../Tiles/Dirt/Cave-Border-horiz.png"/>
  </tile>
  <tile id="333">
   <image width="128" height="96" source="../Tiles/cave-dirt.png"/>

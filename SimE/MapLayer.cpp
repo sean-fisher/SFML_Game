@@ -6,12 +6,6 @@
 
 namespace SimE {
 
-
-
-
-
-
-
 SimE::MapLayer::MapLayer(size_t w, size_t h) {
 	SetDimensions(w, h);
 	m_width = w;
@@ -38,11 +32,19 @@ void MapLayer::addTile(size_t x, size_t y, sf::Texture * texture, float scaleX, 
 		m_mapLayer[x][y]->setTexture(texture);
 	}
 }
+void MapLayer::addTile(size_t x, size_t y, sf::Texture * texture, float scaleX, float scaleY, int rotationDegrees, sf::IntRect bounds) {
+	if (m_mapLayer[x][y]) {
+		m_mapLayer[x][y]->setTexture(texture);
+	} else {
+		m_mapLayer[x][y] = new Tile(*texture, scaleX, scaleY, rotationDegrees, bounds);
+		m_mapLayer[x][y]->setTexture(texture);
+	}
+}
 
 Tile * MapLayer::getTile(size_t x, size_t y) {
-	int width = m_mapLayer.size();
+	size_t width = m_mapLayer.size();
 	if (x < width) {
-		int height = m_mapLayer[x].size();
+		size_t height = m_mapLayer[x].size();
 		if (y < height) {
 			return m_mapLayer[x][y];
 		}
@@ -70,12 +72,12 @@ void MapLayer::draw(sf::RenderWindow * renderWindow, sf::Vector2f center, sf::Ve
 	int totalY = std::min(static_cast<int>(bounds.y / m_tileSize), m_height);
 	int totalX = std::min(static_cast<int>(bounds.x / m_tileSize), m_width);
 
-	int tileX = firstX < 0 ? 0 : firstX-8;
-	int tileY = firstY < 0 ? 0 : firstY-8;
+	int tileX = firstX < 0 ? 0 : firstX-16;
+	int tileY = firstY < 0 ? 0 : firstY-16;
 
-	for (int y = tileY; y < totalY + tileY + 18; y++) {
+	for (int y = tileY; y < totalY + tileY + 32; y++) {
 
-		for (int x = tileX; x < totalX + tileX + 9; x++) {
+		for (int x = tileX; x < totalX + tileX + 32; x++) {
 
 			//Get the tile we're drawing
 			tile = getTile(x, y);
@@ -88,7 +90,7 @@ void MapLayer::draw(sf::RenderWindow * renderWindow, sf::Vector2f center, sf::Ve
 
 	///////////////////////////////////////////////
 	// draw sprites for this layer
-	for (int i = 0; i < m_aliveTiles.size(); i++) {
+	for (size_t i = 0; i < m_aliveTiles.size(); i++) {
 		m_aliveTiles[i]->draw(renderWindow);
 	}
 }

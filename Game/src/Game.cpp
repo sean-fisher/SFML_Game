@@ -84,7 +84,7 @@ int Game::start(int screenWidth, int screenHeight, std::string windowTitle, int 
 	renderWindow.setVerticalSyncEnabled(vsyncEnabled);
 
 	// create a view
-	sf::View view(sf::Vector2f(200, 100), sf::Vector2f(screenWidth, screenHeight));
+	sf::View view(sf::Vector2f(200, 100), sf::Vector2f(static_cast<float>(screenWidth), static_cast<float>(screenHeight)));
 	renderWindow.setView(view);
 	SimE::SimE_c::setView(&view);
 	// zoom to appropriate level
@@ -103,11 +103,15 @@ int Game::start(int screenWidth, int screenHeight, std::string windowTitle, int 
 	imageCache = SimE::ImageCache::singleton();
 
 	// load the Tileset; right now this contains every map tile.
-	imageCache->loadTileset("ss_All");
+	//imageCache->loadTileset("ss_All");
+	//imageCache->loadTileset("GUIDE");
+	//imageCache->loadTileset("TestTileset");
+	imageCache->loadTileset("Lab");
+	imageCache->loadTileset("generic");
 
 	// load the tilemap
-	std::vector<int> layersToSkip = { 3, 5};
-	SimE::Tilemap tilemap(16, 16, "Rotate_test", imageCache, true, layersToSkip);
+	std::vector<int> layersToSkip = {5};
+	SimE::Tilemap tilemap(16, 16, "Lab", imageCache, true, layersToSkip);
 	SimE::SimE_c::setMap(&tilemap);
 	int maxlayer = 0;
 
@@ -117,24 +121,24 @@ int Game::start(int screenWidth, int screenHeight, std::string windowTitle, int 
 	// create a player
 	sf::Texture spriteTexture;
 	int copHash = SimE::IOUtility::getHashFromFilepath("Cop/idle_front.png");
-	imageCache->loadTexture(SimE::CHARACTER, "Cop/idle_front.png", &spriteTexture, copHash);
+	imageCache->loadIndividualTexture(SimE::CHARACTER, "Cop/idle_front.png", &spriteTexture, copHash);
 	SimE::Player player;
 	player.setPos(40, 0);
 	player.birth();
 	player.setView(&view);
 	player.setSprite(imageCache->getTexture(copHash));
 	player.setCollider(16, 32);
-	tilemap.addAliveTileToLayer(player.getTile(), 2);
+	tilemap.addAliveTileToLayer(player.getTile(), 1);
 
 	// create a test collider
 	sf::Texture testTexture;
 	int testHash = SimE::IOUtility::getHashFromFilepath("fun.png");
-	imageCache->loadTexture(SimE::TEST, "fun.png", &testTexture, testHash);
+	imageCache->loadIndividualTexture(SimE::TEST, "fun.png", &testTexture, testHash);
 	SimE::Obstacle col;
-	//col.birth();
-	//col.setSprite(imageCache->getTexture(testHash));
-	//col.setCollider(64, 64);
-	//tilemap.addAliveTileToLayer(col.getTile(), 0);
+	col.birth();
+	col.setSprite(imageCache->getTexture(testHash));
+	col.setCollider(64, 64);
+	tilemap.addAliveTileToLayer(col.getTile(), 2);
 
 	//////////////////////////////////////////////////
 	// START RECEIVING INPUT
@@ -167,21 +171,6 @@ int Game::start(int screenWidth, int screenHeight, std::string windowTitle, int 
 		SimE::SimE_c::drawFrame();
 		// draw more here if absolutely necessary or for testing purposes
 		SimE::SimE_c::renderFrame();
-		/*static int v = 1;
-		v++;
-		static int s = -1;
-		if (v > 300) {
-			v = 0; 
-			s *= -1;
-		}
-		//view.move(s, 0);
-		if (s > 0) {
-			view.zoom(1 + 1 * currentTime);
-
-		} else {
-
-			view.zoom(1 - 1 * currentTime);
-		}*/
 
 		renderWindow.setView(view);
 	}

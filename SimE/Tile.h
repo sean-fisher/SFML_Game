@@ -7,6 +7,7 @@ class Tile {
 public:
 	Tile() {};
 	Tile(sf::Texture& texture, float scaleX, float scaleY, bool flipDiagonally);
+	Tile(sf::Texture& texture, float scaleX, float scaleY, bool flipDiagonally, sf::IntRect cutoutBounds);
 	~Tile();
 	void setTexture(sf::Texture* texture);
 

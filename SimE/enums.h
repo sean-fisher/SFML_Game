@@ -8,6 +8,7 @@ enum TextureType {
 	TILESET,
 	EFFECT,
 	UI,
+	SPRITESHEET,
 	TEST
 };
 }

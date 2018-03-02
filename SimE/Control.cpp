@@ -100,7 +100,7 @@ void Control::init() {
 }
 void Control::updateAllInput() {
 
-	for (int i = 0; i < keys.size(); i++) {
+	for (size_t i = 0; i < keys.size(); i++) {
 		keys[i].pressed_last_frame = keys[i].pressed;
 
 		if (keys[i].key != NULL) {

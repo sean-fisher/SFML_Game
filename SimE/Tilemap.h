@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <map>
 
 #include "MapLayer.h"
 #include "ImageCache.h"
@@ -16,7 +17,7 @@ public:
 
 private:
 	ImageCache* m_imageCache;
-	std::vector<MapLayer*> m_layers;
+	std::map<int, MapLayer*> m_layers;
 	bool loadTilemapLayerFromCSV(const std::string mapFileName, ImageCache* imageCache, MapLayer* in);
 	bool loadTilemapFromTMX(const std::string mapFileName, ImageCache* imageCache, std::vector<int> layersToSkip);
 };

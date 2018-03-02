@@ -1,8 +1,10 @@
 #include "stdafx.h"
 #include "Tilemap.h"
+#include "tinyxml2.h"
+
 #include <boost/filesystem.hpp>
 #include <cstdarg>
-#include "tinyxml2.h"
+#include <map>
 
 namespace SimE {
 
@@ -57,10 +59,11 @@ void Tilemap::loadAllLayers(int width, int height, std::string mapName, std::vec
 	for (size_t i = 0; i < relevantFilenames.size(); i++) {
 		if (std::find(layersToSkip.begin(), layersToSkip.end(), i) == layersToSkip.end()) {
 			std::cout << "Loaded Level Data: " << relevantFilenames[i] << std::endl;
-			MapLayer* in = new MapLayer(width, height);
+			MapLayer* in = new MapLayer(width, height); // TODO
+			in->layerNum = i;
 
 			loadTilemapLayerFromCSV(relevantFilenames[i], m_imageCache, in);
-			m_layers.push_back(in);
+			m_layers[i] = in;
 		}
 	}
 
@@ -72,10 +75,9 @@ void Tilemap::addAliveTileToLayer(AliveTile * aTile, int layer) {
 
 void Tilemap::drawAll(sf::RenderWindow* renderWindow, sf::Vector2f center, sf::Vector2f bounds) {
 	MapLayer* currLayer;
-	for (int i = 0; i < m_layers.size(); i++) {
-		currLayer = m_layers[i];
-		if (currLayer != nullptr) {
-			currLayer->draw(renderWindow, center, bounds);
+	for (auto it = m_layers.begin(); it != m_layers.end(); it++) {
+		if (it->second != nullptr) {
+			it->second->draw(renderWindow, center, bounds);
 		}
 	}
 	/*
@@ -91,8 +93,8 @@ void Tilemap::drawAll(sf::RenderWindow* renderWindow, sf::Vector2f center, sf::V
 }
 
 bool Tilemap::loadTilemapLayerFromCSV(const std::string mapFileName, ImageCache* imageCache, MapLayer* in) {
-
-	const static std::string tilemapPath = "Assets/Tilemaps/";
+	// THIS SHOULDN'T BE CALLED
+	/*const static std::string tilemapPath = "Assets/Tilemaps/";
 	const static std::string tilemapFiletype = ".csv"; // entire maps are stored in .tmx. I can also store layers separately as .csv
 
 	std::string fullPath = tilemapPath + mapFileName;// +tilemapFiletype;
@@ -155,7 +157,7 @@ bool Tilemap::loadTilemapLayerFromCSV(const std::string mapFileName, ImageCache*
 	}
 	printf("Read tile map layer of size %d", sum);
 	file.close();
-
+	*/
 	return true;
 }
 bool Tilemap::loadTilemapFromTMX(const std::string mapFileName, ImageCache* imageCache, std::vector<int> layersToSkip) {
@@ -177,32 +179,59 @@ bool Tilemap::loadTilemapFromTMX(const std::string mapFileName, ImageCache* imag
 	int height;
 	int tileWidth;
 	int tileHeight;
-	// get the root node and the name of the tileset
+	// get the root node and the name of the tilemap
 	tinyxml2::XMLNode* rootNode = mapXML.FirstChild()->NextSibling();
 	rootNode->ToElement()->QueryIntAttribute("width", &width);
 	rootNode->ToElement()->QueryIntAttribute("height", &height);
 	rootNode->ToElement()->QueryIntAttribute("tilewidth", &tileWidth);
 	rootNode->ToElement()->QueryIntAttribute("tileheight", &tileHeight);
 	
-	tinyxml2::XMLNode* layerElement = rootNode->FirstChildElement()->NextSibling();
+	tinyxml2::XMLNode* layerElement = rootNode->FirstChildElement();
 
 	std::string value;
-	int layerNum = 0; // number of layers added
-	int layersChecked = 0; // the numbers of the layer being checked; not all may be added
+	size_t layerCount = 0; // number of layers added
+	int layer = 0; // the numbers of the layer being checked; not all may be added
+
+	std::vector<int> gids;
+	std::vector<std::string> tilesetNames;
+	int numSets = 0;
+
+	// go through the tilesets and add them to the tilesetNames vector
+	while (layerElement->FirstChild() == nullptr) {
+		// this is a tileset element
+		int gid;
+		layerElement->ToElement()->QueryIntAttribute("firstgid", &gid);
+		const char* setName;
+		layerElement->ToElement()->QueryStringAttribute("source", &setName); // add the source filepath
+
+																			 // TODO: Parse for name
+		int charIndex = strlen(setName) - 1;
+		for (; charIndex >= 0; charIndex--) {
+			char c = setName[charIndex];
+			if (c == '/') {
+				break;
+			}
+		}
+		std::string setNameWithoutFilepath = std::string(setName).substr(charIndex + 1, strlen(setName));
+
+		tilesetNames.push_back(setNameWithoutFilepath);
+		gids.push_back(gid);
+
+		layerElement = layerElement->NextSibling();
+	}
+
+
+	// FOR EACH LAYER
 	while (layerElement != nullptr) {
 		int x = 0, y = 0, sum = 0; // x and y represent tile coordinates, so we only change them when new tiles are added
 
-		if (std::find(layersToSkip.begin(), layersToSkip.end(), layersChecked) == layersToSkip.end()) {
-			if (layerNum >= m_layers.size()) {
-				m_layers.push_back(new MapLayer(width, height));
-			}
 
-			// load csv data
+		// if the layer number is in the layersToSkip vector, then we don't load it
+		if (std::find(layersToSkip.begin(), layersToSkip.end(), layer) == layersToSkip.end()) {
 
-			// skip over the tileset entries
-			while (layerElement->FirstChild() == nullptr) {
-				layerElement = layerElement->NextSibling();
-			}
+			m_layers[layer] = (new MapLayer(width, height));
+			
+
 			const char* csvLayer = layerElement->FirstChild()->ToElement()->GetText();
 
 			int charIndex = 1;// we skip the first character because it is '\0'
@@ -224,11 +253,35 @@ bool Tilemap::loadTilemapFromTMX(const std::string mapFileName, ImageCache* imag
 									FLIPPED_VERTICALLY_FLAG |
 									FLIPPED_DIAGONALLY_FLAG)) - 1; // minus one because the tileset starts at 0 but the map has 0 as empty
 
-								float scaleX = flipped_horizontally ? -1 : 1;
-								float scaleY = flipped_vertically ? -1 : 1;
+								float scaleX = static_cast<float>(flipped_horizontally ? -1 : 1);
+								float scaleY = static_cast<float>(flipped_vertically ? -1 : 1);
 
-								sf::Texture* tex = imageCache->getTexture(id);//&m_cachedTextureMap[id];
-								m_layers[layerNum]->addTile(x, y, tex, scaleX, scaleY, flipped_diagonally);
+
+								int setIndex = gids.size() - 1;
+								// get the set depending on the id
+								for (; setIndex >= 0; setIndex--) {
+									if (gids[setIndex] < id) {
+										id -= gids[setIndex] - 1; // subtract the gid so we get the correct id for the particular set
+																  // the correct tileset is at tilesetNames[i];
+										break;
+									}
+								}
+								std::string setFileName = tilesetNames[setIndex];
+								std::string setName = setFileName.substr(0, setFileName.length() - tilemapFiletype.length());
+
+								sf::IntRect bounds;
+								bool needsBounds = false;
+								sf::Texture* tex = imageCache->getTexture(id, setName, &needsBounds, &bounds);
+
+								// check if the bounds need to be set; i.e. if tex was a spritesheet
+								if (needsBounds) {
+									//y += tex->getSize().y / tileHeight;
+									m_layers[layer]->addTile(x, y, tex, scaleX, scaleY, flipped_diagonally, bounds);
+
+								} else {
+									m_layers[layer]->addTile(x, y, tex, scaleX, scaleY, flipped_diagonally);
+
+								}
 								sum++;
 							}
 							value = "";
@@ -253,13 +306,34 @@ bool Tilemap::loadTilemapFromTMX(const std::string mapFileName, ImageCache* imag
 							bool flipped_vertically = (fullid & FLIPPED_VERTICALLY_FLAG);
 							bool flipped_diagonally = (fullid & FLIPPED_DIAGONALLY_FLAG);
 
-							float scaleX = flipped_horizontally ? -1 : 1;
-							float scaleY = flipped_vertically ? -1 : 1;
+							float scaleX = static_cast<float>(flipped_horizontally ? -1 : 1);
+							float scaleY = static_cast<float>(flipped_vertically ? -1 : 1);
 							int rotDegrees = flipped_diagonally ? 90 : 0;
 
-							static int tile = 0;
-							sf::Texture* tex = imageCache->getTexture(id); //&m_cachedTextureMap[id];
-							m_layers[layerNum]->addTile(x, y, tex, scaleX, scaleY, flipped_diagonally);
+							int setIndex = gids.size() - 1;
+							// get the set depending on the id
+							for (; setIndex >= 0; setIndex--) {
+								if (gids[setIndex] - 2 < id) {
+									id -= gids[setIndex] - 1; // subtract the gid so we get the correct id for the particular set
+									// the correct tileset is at tilesetNames[i];
+									break;
+								}
+							}
+							std::string setFileName = tilesetNames[setIndex];
+							std::string setName = setFileName.substr(0, setFileName.length() - tilemapFiletype.length());
+
+							sf::IntRect bounds;
+							bool needsBounds = false;
+ 							sf::Texture* tex = imageCache->getTexture(id, setName, &needsBounds, &bounds);
+
+							// check if the bounds need to be set; i.e. if tex was a spritesheet
+							if (needsBounds) {
+								//y -= tex->getSize().y / tileHeight;
+								m_layers[layer]->addTile(x, y, tex, scaleX, scaleY, flipped_diagonally, bounds);
+							} else {
+								m_layers[layer]->addTile(x, y, tex, scaleX, scaleY, flipped_diagonally);
+							}
+
 							sum++;
 						}
 						value = "";
@@ -268,9 +342,9 @@ bool Tilemap::loadTilemapFromTMX(const std::string mapFileName, ImageCache* imag
 				}
 				character = csvLayer[++charIndex];
 			}
-			layerNum++;
+			layerCount++;
 		}
-		layersChecked++;
+		layer++;
 		layerElement = layerElement->NextSibling();
 	}
 

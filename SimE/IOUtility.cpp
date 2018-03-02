@@ -37,6 +37,9 @@ bool IOUtility::getTexture(TextureType textureType, const std::string & textureN
 	case UI:
 		in->loadFromFile("Assets/Textures/UI/" + textureName);
 		return true;
+	case SPRITESHEET:
+		in->loadFromFile("Assets/Textures/Spritesheets/" + textureName);
+		return true;
 
 	case TEST:
 		in->loadFromFile("Assets/Textures/Test/" + textureName);
