@@ -4,4 +4,11 @@ This is the repository for a personal game development project I've been working
 It is a 2D Role-playing game inspired by the likes of Chrono Trigger, Mother 3, and Final Fantasy VI. One of the goals I settled on when first starting this project was to complete it with as high a level of quality as possible. As such, it likely won't be finished for some time. I am hoping it can be finished in 2020, but that is a very rough estimate.
 
 WORK-IN-PROGRESS SCREENSHOTS
-![Alt text](screenshots/Cliffside.png?raw=true "Cliffside")
+
+
+
+![Cliffside](Screenshots/Cliffside.png?raw=true "Cliffside")
+
+![City](Screenshots/City.png?raw=true "City")
+
+![Village](Screenshots/MountainVillage.png?raw=true "Village")
