@@ -9,6 +9,6 @@ WORK-IN-PROGRESS SCREENSHOTS
 
 ![Cliffside](Screenshots/Cliffside.png?raw=true "Cliffside")
 
-![City](Screenshots/City.png?raw=true "City")
-
 ![Village](Screenshots/MountainVillage.png?raw=true "Village")
+
+![City](Screenshots/City.png?raw=true "City")
