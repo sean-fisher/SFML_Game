@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset name="Dirt" tilewidth="128" tileheight="128" tilecount="57" columns="0">
+<tileset name="Dirt" tilewidth="128" tileheight="128" tilecount="60" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="20">
   <image width="64" height="64" source="../Tiles/Dirt/cave-label.png"/>
@@ -171,5 +171,14 @@
  </tile>
  <tile id="76">
   <image width="96" height="104" source="../Tiles/Dirt/cave-wall.png"/>
+ </tile>
+ <tile id="77">
+  <image width="128" height="96" source="../Tiles/Dirt/dirt-dead.png"/>
+ </tile>
+ <tile id="78">
+  <image width="128" height="96" source="../Tiles/Dirt/dark-dirt.png"/>
+ </tile>
+ <tile id="79">
+  <image width="32" height="24" source="../Tiles/Adobe/meadow_bezel_wall.png"/>
  </tile>
 </tileset>

@@ -193,18 +193,6 @@
  <tile id="194">
   <image width="30" height="55" source="../Tiles/Building-old/adobe_Sprites5_48.png"/>
  </tile>
- <tile id="195">
-  <image width="15" height="31" source="../Tiles/Building-old/adobe_Sprites5_50.png"/>
- </tile>
- <tile id="196">
-  <image width="17" height="28" source="../Tiles/Building-old/adobe_Sprites5_51.png"/>
- </tile>
- <tile id="197">
-  <image width="32" height="18" source="../Tiles/Building-old/adobe_Sprites5_59.png"/>
- </tile>
- <tile id="198">
-  <image width="32" height="18" source="../Tiles/Building-old/adobe_Sprites5_60.png"/>
- </tile>
  <tile id="199">
   <image width="16" height="16" source="../Tiles/Building-old/Carpet_Border_1.png"/>
  </tile>
@@ -264,5 +252,17 @@
  </tile>
  <tile id="218">
   <image width="32" height="64" source="../Tiles/Building-old/plaster-roof.png"/>
+ </tile>
+ <tile id="219">
+  <image width="8" height="16" source="../Tiles/Building-old/fence-post.png"/>
+ </tile>
+ <tile id="220">
+  <image width="32" height="16" source="../Tiles/Building-old/fence.png"/>
+ </tile>
+ <tile id="221">
+  <image width="8" height="32" source="../Tiles/Building-old/fence-side.png"/>
+ </tile>
+ <tile id="222">
+  <image width="16" height="32" source="../Tiles/Building-old/fence-slant.png"/>
  </tile>
 </tileset>

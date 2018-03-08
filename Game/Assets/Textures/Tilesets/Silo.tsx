@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset name="Silo" tilewidth="64" tileheight="145" tilecount="19" columns="0">
+<tileset name="Silo" tilewidth="96" tileheight="145" tilecount="26" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="2">
   <image width="64" height="64" source="../Tiles/Silo/wall_upper.2d.png"/>
@@ -18,12 +18,6 @@
  </tile>
  <tile id="7">
   <image width="12" height="128" source="../Tiles/Silo/_Sprites7_28.png"/>
- </tile>
- <tile id="8">
-  <image width="63" height="69" source="../Tiles/Silo/_Sprites7_29.png"/>
- </tile>
- <tile id="9">
-  <image width="64" height="80" source="../Tiles/Silo/_Sprites7_30.png"/>
  </tile>
  <tile id="10">
   <image width="15" height="128" source="../Tiles/Silo/_Sprites7_31.png"/>
@@ -57,5 +51,32 @@
  </tile>
  <tile id="20">
   <image width="64" height="64" source="../Tiles/Silo/wall_large.2d.png"/>
+ </tile>
+ <tile id="21">
+  <image width="64" height="104" source="../Tiles/Silo/dirt_wall_1.png"/>
+ </tile>
+ <tile id="22">
+  <image width="64" height="64" source="../Tiles/Silo/dirt-wall-2.png"/>
+ </tile>
+ <tile id="23">
+  <image width="43" height="127" source="../Tiles/Silo/dirt-wall-3.png"/>
+ </tile>
+ <tile id="24">
+  <image width="96" height="104" source="../Tiles/Silo/dirt-wall-4.png"/>
+ </tile>
+ <tile id="25">
+  <image width="8" height="72" source="../Tiles/Silo/border-wide.png"/>
+ </tile>
+ <tile id="26">
+  <image width="48" height="48" source="../Tiles/Silo/border-slant.png"/>
+ </tile>
+ <tile id="27">
+  <image width="32" height="48" source="../Tiles/Silo/ground-trellis.png"/>
+ </tile>
+ <tile id="28">
+  <image width="48" height="64" source="../Tiles/Silo/trellis-empty.png"/>
+ </tile>
+ <tile id="29">
+  <image width="48" height="64" source="../Tiles/Silo/trellis-red.png"/>
  </tile>
 </tileset>

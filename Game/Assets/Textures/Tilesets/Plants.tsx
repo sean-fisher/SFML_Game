@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset name="Plants" tilewidth="106" tileheight="198" tilecount="46" columns="0">
+<tileset name="Plants" tilewidth="128" tileheight="198" tilecount="59" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="8">
   <image width="12" height="15" source="../Tiles/Plants/adobe_Sprites5_57.png"/>
@@ -38,13 +38,13 @@
   <image width="16" height="28" source="../Tiles/Plants/_Sprites7_02.png"/>
  </tile>
  <tile id="21">
-  <image width="38" height="104" source="../Tiles/Plants/_Sprites7_06.png"/>
+  <image width="64" height="95" source="../Tiles/Plants/tree-dead-2.png"/>
  </tile>
  <tile id="22">
-  <image width="45" height="107" source="../Tiles/Plants/_Sprites7_07.png"/>
+  <image width="128" height="131" source="../Tiles/Plants/tree-dead-3.png"/>
  </tile>
  <tile id="23">
-  <image width="72" height="191" source="../Tiles/Plants/_Sprites7_08.png"/>
+  <image width="128" height="128" source="../Tiles/Plants/tree-dead-5.png"/>
  </tile>
  <tile id="24">
   <image width="72" height="198" source="../Tiles/Plants/_Sprites7_09.png"/>
@@ -138,5 +138,44 @@
  </tile>
  <tile id="54">
   <image width="12" height="17" source="../Tiles/Plants/adobe_Sprites5_56.png"/>
+ </tile>
+ <tile id="55">
+  <image width="128" height="131" source="../Tiles/Plants/tree-dead.png"/>
+ </tile>
+ <tile id="56">
+  <image width="128" height="131" source="../Tiles/Plants/tree-brown.png"/>
+ </tile>
+ <tile id="57">
+  <image width="80" height="96" source="../Tiles/Plants/tree-brown-2.png"/>
+ </tile>
+ <tile id="58">
+  <image width="128" height="128" source="../Tiles/Plants/tree-brown-5.png"/>
+ </tile>
+ <tile id="59">
+  <image width="80" height="39" source="../Tiles/Plants/tree-brown-trunk.png"/>
+ </tile>
+ <tile id="60">
+  <image width="81" height="48" source="../Tiles/Plants/tree-brown-trunk-2.png"/>
+ </tile>
+ <tile id="61">
+  <image width="80" height="64" source="../Tiles/Plants/leaves.png"/>
+ </tile>
+ <tile id="62">
+  <image width="48" height="52" source="../Tiles/Plants/plant-orange.png"/>
+ </tile>
+ <tile id="63">
+  <image width="48" height="104" source="../Tiles/Plants/leaf-chain.png"/>
+ </tile>
+ <tile id="64">
+  <image width="64" height="80" source="../Tiles/Plants/leaf-chain-slant.png"/>
+ </tile>
+ <tile id="65">
+  <image width="48" height="48" source="../Tiles/Plants/flower_purple.png"/>
+ </tile>
+ <tile id="66">
+  <image width="32" height="24" source="../Tiles/Plants/grass-1.png"/>
+ </tile>
+ <tile id="67">
+  <image width="32" height="24" source="../Tiles/Plants/grass-2.png"/>
  </tile>
 </tileset>

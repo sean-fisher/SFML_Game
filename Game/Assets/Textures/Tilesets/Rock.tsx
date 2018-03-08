@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset name="Rock" tilewidth="64" tileheight="128" tilecount="19" columns="0">
+<tileset name="Rock" tilewidth="64" tileheight="128" tilecount="24" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="3">
   <image width="64" height="80" source="../Tiles/Rock/wall.png"/>
@@ -57,5 +57,20 @@
  </tile>
  <tile id="21">
   <image width="16" height="16" source="../Tiles/Rock/rock_floor.2d.png"/>
+ </tile>
+ <tile id="22">
+  <image width="48" height="27" source="../Tiles/Rock/forest-rock.png"/>
+ </tile>
+ <tile id="23">
+  <image width="16" height="32" source="../Tiles/Rock/rock-small.png"/>
+ </tile>
+ <tile id="24">
+  <image width="48" height="27" source="../Tiles/Rock/rock-big-dirt.png"/>
+ </tile>
+ <tile id="25">
+  <image width="16" height="32" source="../Tiles/Rock/rock-small-dirt.png"/>
+ </tile>
+ <tile id="26">
+  <image width="32" height="16" source="../Tiles/Rock/rocks.png"/>
  </tile>
 </tileset>
