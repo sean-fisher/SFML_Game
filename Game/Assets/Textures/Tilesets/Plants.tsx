@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset name="Plants" tilewidth="128" tileheight="198" tilecount="59" columns="0">
+<tileset name="Plants" tilewidth="128" tileheight="198" tilecount="61" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="8">
   <image width="12" height="15" source="../Tiles/Plants/adobe_Sprites5_57.png"/>
@@ -177,5 +177,11 @@
  </tile>
  <tile id="67">
   <image width="32" height="24" source="../Tiles/Plants/grass-2.png"/>
+ </tile>
+ <tile id="68">
+  <image width="32" height="48" source="../Tiles/Plants/corn.png"/>
+ </tile>
+ <tile id="69">
+  <image width="32" height="49" source="../Tiles/Plants/tomatoes.png"/>
  </tile>
 </tileset>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset name="Building-old" tilewidth="112" tileheight="143" tilecount="88" columns="0">
+<tileset name="Building-old" tilewidth="112" tileheight="143" tilecount="94" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="131">
   <image width="32" height="64" source="../Tiles/Building-old/_Sprites3_01.png"/>
@@ -68,13 +68,13 @@
   <image width="9" height="41" source="../Tiles/Building-old/_Sprites4_23.png"/>
  </tile>
  <tile id="153">
-  <image width="9" height="25" source="../Tiles/Building-old/_Sprites4_33.png"/>
+  <image width="8" height="16" source="../Tiles/Building-old/_Sprites4_33.png"/>
  </tile>
  <tile id="154">
-  <image width="10" height="25" source="../Tiles/Building-old/_Sprites4_34.png"/>
+  <image width="16" height="16" source="../Tiles/Building-old/_Sprites4_34.png"/>
  </tile>
  <tile id="155">
-  <image width="16" height="18" source="../Tiles/Building-old/_Sprites4_35.png"/>
+  <image width="16" height="16" source="../Tiles/Building-old/_Sprites4_35.png"/>
  </tile>
  <tile id="156">
   <image width="16" height="19" source="../Tiles/Building-old/_Sprites4_36.png"/>
@@ -83,19 +83,19 @@
   <image width="16" height="32" source="../Tiles/Building-old/_Sprites4_37.png"/>
  </tile>
  <tile id="158">
-  <image width="16" height="18" source="../Tiles/Building-old/_Sprites4_38.png"/>
+  <image width="16" height="16" source="../Tiles/Building-old/_Sprites4_38.png"/>
  </tile>
  <tile id="159">
   <image width="16" height="25" source="../Tiles/Building-old/_Sprites4_39.png"/>
  </tile>
  <tile id="160">
-  <image width="16" height="32" source="../Tiles/Building-old/_Sprites4_40.png"/>
+  <image width="16" height="24" source="../Tiles/Building-old/_Sprites4_40.png"/>
  </tile>
  <tile id="161">
-  <image width="16" height="32" source="../Tiles/Building-old/_Sprites4_41.png"/>
+  <image width="8" height="16" source="../Tiles/Building-old/_Sprites4_41.png"/>
  </tile>
  <tile id="162">
-  <image width="16" height="32" source="../Tiles/Building-old/_Sprites4_42.png"/>
+  <image width="16" height="16" source="../Tiles/Building-old/_Sprites4_42.png"/>
  </tile>
  <tile id="163">
   <image width="16" height="17" source="../Tiles/Building-old/_Sprites4_43.png"/>
@@ -107,7 +107,7 @@
   <image width="8" height="25" source="../Tiles/Building-old/_Sprites4_45.png"/>
  </tile>
  <tile id="166">
-  <image width="16" height="32" source="../Tiles/Building-old/_Sprites4_46.png"/>
+  <image width="16" height="16" source="../Tiles/Building-old/_Sprites4_46.png"/>
  </tile>
  <tile id="167">
   <image width="16" height="32" source="../Tiles/Building-old/_Sprites4_47.png"/>
@@ -149,7 +149,7 @@
   <image width="32" height="18" source="../Tiles/Building-old/_Sprites5_59.png"/>
  </tile>
  <tile id="180">
-  <image width="32" height="18" source="../Tiles/Building-old/_Sprites5_60.png"/>
+  <image width="32" height="16" source="../Tiles/Building-old/_Sprites5_60.png"/>
  </tile>
  <tile id="181">
   <image width="16" height="32" source="../Tiles/Building-old/_Sprites8_50.png"/>
@@ -264,5 +264,23 @@
  </tile>
  <tile id="222">
   <image width="16" height="32" source="../Tiles/Building-old/fence-slant.png"/>
+ </tile>
+ <tile id="223">
+  <image width="32" height="64" source="../Tiles/Building-old/barn-wall.png"/>
+ </tile>
+ <tile id="224">
+  <image width="64" height="128" source="../Tiles/Building-old/barn-roof.png"/>
+ </tile>
+ <tile id="225">
+  <image width="64" height="8" source="../Tiles/Building-old/barn-border.png"/>
+ </tile>
+ <tile id="226">
+  <image width="8" height="32" source="../Tiles/Building-old/barn-border-wall.png"/>
+ </tile>
+ <tile id="227">
+  <image width="32" height="63" source="../Tiles/Building-old/barn-door.png"/>
+ </tile>
+ <tile id="228">
+  <image width="16" height="16" source="../Tiles/Building-old/barn-window.png"/>
  </tile>
 </tileset>
